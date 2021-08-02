@@ -16,6 +16,7 @@ class Nethermind < Formula
     bin.install Dir['./Nethermind.Runner']
     bin.install Dir['./Nethermind.Cli']
     bin.install Dir['./Nethermind.Launcher']
+    bin.install Dir['./NLog.config']
   end
 
   test do
