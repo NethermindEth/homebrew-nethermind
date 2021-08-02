@@ -8,7 +8,14 @@ class Nethermind < Formula
   depends_on "cmake" => :build
 
   def install
-    bin.install './'
+    bin.install Dir'./chainspec'
+    bin.install Dir'./configs'
+    bin.install Dir'./Data'
+    bin.install Dir'./keystore'
+    bin.install Dir'./plugins'
+    bin.install Dir'./Nethermind.Runner'
+    bin.install Dir'./Nethermind.Cli'
+    bin.install Dir'./Nethermind.Launcher'
   end
 
   test do
