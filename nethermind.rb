@@ -8,7 +8,7 @@ class Nethermind < Formula
   depends_on "cmake" => :build
 
   def install
-    bin.install 'nethermind'
+    bin.install './'
   end
 
   test do
