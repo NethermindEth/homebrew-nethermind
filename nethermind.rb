@@ -17,7 +17,7 @@ class Nethermind < Formula
     # system "./configure", *std_configure_args, "--disable-silent-rules"
     # system "cmake", "-S", ".", "-B", "build", *std_cmake_args
     bin.install "nethermind"
-    bin.install Dir["./Nethermind.Runner"]
+    # bin.install Dir["./Nethermind.Runner"]
   end
 
   test do
