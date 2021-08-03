@@ -7,14 +7,16 @@ class Nethermind < Formula
 
   def install
     File.rename("./Nethermind.Runner","./nethermind")
+    File.rename("./Nethermind.Cli","./nethermind-cli")
+    File.rename("./Nethermind.Launcher","./nethermind-launcher")
     bin.install Dir['./chainspec']
     bin.install Dir['./configs']
     bin.install Dir['./Data']
     bin.install Dir['./keystore']
     bin.install Dir['./plugins']
     bin.install Dir['./nethermind']
-    bin.install Dir['./Nethermind.Cli']
-    bin.install Dir['./Nethermind.Launcher']
+    bin.install Dir['./nethermind-cli']
+    bin.install Dir['./nethermind-launcher']
     bin.install Dir['./NLog.config']
   end
 
