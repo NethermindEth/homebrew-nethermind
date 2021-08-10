@@ -1,8 +1,8 @@
 class Nethermind < Formula
   desc "Our flagship .NET Core Ethereum client for Linux, Windows, MacOs - full and actively developed"
   homepage "http://downloads.nethermind.io"
-  url "https://github.com/NethermindEth/nethermind/releases/download/1.10.79/nethermind-darwin-amd64-1.10.79-e45db5f-20210722.zip"
-  sha256 "3c68f79533822c93444867df3c4d1cd7b5f98f60359a0c4da542f83d06daed96"
+  url "https://github.com/NethermindEth/nethermind/releases/download/1.10.79b/nethermind-darwin-amd64-1.10.79b-c2a0fb1-20210810.zip"
+  sha256 "9aafb5c96255045e8cf30f9d037cd6098ad76380"
   license "GNU LESSER GENERAL PUBLIC LICENSE"
 
   def install
