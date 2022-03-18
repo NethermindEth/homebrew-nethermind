@@ -22,6 +22,8 @@ class Nethermind < Formula
     File.rename("./Nethermind.Runner","./nethermind")
     File.rename("./Nethermind.Cli","./nethermind-cli")
     File.rename("./Nethermind.Launcher","./nethermind-launcher")
+    system "codesign -s ./nethermind"
+    system "codesign -s ./nethermind-cli"
     bin.install Dir['./chainspec']
     bin.install Dir['./configs']
     bin.install Dir['./Data']
