@@ -4,8 +4,6 @@ class Nethermind < Formula
   date = "20220317"
   desc "Our flagship .NET Core Ethereum client for Linux, Windows, MacOs - full and actively developed"
   homepage "http://downloads.nethermind.io"
-  url "https://github.com/NethermindEth/nethermind/releases/download/1.12.4/nethermind-darwin-amd64-1.12.4-1c8b669-20220113.zip"
-  sha256 "8fbf4ccdb6fe97884bfaa0e1df431e4b11808b564e80d0a9945d2d736b1d4752"
   license "GNU LESSER GENERAL PUBLIC LICENSE"
   version app_version
   
