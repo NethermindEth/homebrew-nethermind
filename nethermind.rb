@@ -21,7 +21,7 @@ class Nethermind < Formula
   def install
     File.rename("./Nethermind.Runner","./nethermind")
     File.rename("./Nethermind.Cli","./nethermind-cli")
-    File.rename("./Nethermind.Launcher","./nethermind-launcher")s
+    File.rename("./Nethermind.Launcher","./nethermind-launcher")
     bin.install Dir['./chainspec']
     bin.install Dir['./configs']
     bin.install Dir['./Data']
