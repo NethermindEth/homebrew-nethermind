@@ -22,6 +22,8 @@ class Nethermind < Formula
     File.rename("./Nethermind.Runner","./nethermind")
     File.rename("./Nethermind.Cli","./nethermind-cli")
     File.rename("./Nethermind.Launcher","./nethermind-launcher")
+    system "codesign -s - ./nethermind"
+    system "codesign -s - ./nethermind-cli"
     bin.install Dir['./chainspec']
     bin.install Dir['./configs']
     bin.install Dir['./Data']
@@ -35,25 +37,5 @@ class Nethermind < Formula
 
   test do
     system "false"
-  end
-  
-  plist_options manual: "nethermind"
-
-  def plist; <<~EOS
-    <?xml version="1.0" encoding="UTF-8"?>
-    <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
-    <plist version="1.0">
-      <dict>
-        <key>com.apple.security.cs.allow-jit</key>
-        <true/>
-        <key>com.apple.security.cs.allow-unsigned-executable-memory</key>
-        <true/>
-        <key>com.apple.security.cs.allow-dyld-environment-variables</key>
-        <true/>
-        <key>com.apple.security.cs.disable-library-validation</key>
-        <true/>
-      </dict>
-    </plist>
-    EOS
   end
 end
