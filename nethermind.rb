@@ -1,7 +1,7 @@
 class Nethermind < Formula
-  app_version = "1.12.6"
-  commit = "fb2a395"
-  date = "20220317"
+  app_version = "1.13.1"
+  commit = "155ca7a"
+  date = "20220527"
   desc "Our flagship .NET Core Ethereum client for Linux, Windows, MacOs - full and actively developed"
   homepage "http://downloads.nethermind.io"
   license "GNU LESSER GENERAL PUBLIC LICENSE"
