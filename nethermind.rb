@@ -1,7 +1,7 @@
 class Nethermind < Formula
-  app_version = '1.13.6'
-  commit = 'be7b4ab'
-  date = '20220801'
+  app_version = '1.14.0'
+  commit = '60f920b'
+  date = '20220822'
   desc "Our flagship .NET Core Ethereum client for Linux, Windows, MacOs - full and actively developed"
   homepage "http://downloads.nethermind.io"
   license "GNU LESSER GENERAL PUBLIC LICENSE"
@@ -10,10 +10,10 @@ class Nethermind < Formula
   case
   when OS.mac? && Hardware::CPU.intel?
     url "https://github.com/NethermindEth/nethermind/releases/download/#{app_version}/nethermind-darwin-amd64-#{app_version}-#{commit}-#{date}.zip"
-    sha256 "849e9242ea32e61a7972b2c9e0f3150addcd491c2fd435335a1909103eabe69e"
+    sha256 "2c00d956e0c521dbcfdee8cde8392da8887c89f0cd0c9019b84cbe384725348a"
   when OS.mac? && Hardware::CPU.arm?
     url "https://github.com/NethermindEth/nethermind/releases/download/#{app_version}/nethermind-darwin-arm64-#{app_version}-#{commit}-#{date}.zip"
-    sha256 "51edce2cd48703c6d5289caadecb0e22a896d8c95c2d78b0e6a301dd1d159ee4"
+    sha256 "63517e3a8a153e4d6939be97ad6d150f250c6e5801397f02e7521d715cd6c62a"
   else
     odie "Unexpected platform!"
   end
