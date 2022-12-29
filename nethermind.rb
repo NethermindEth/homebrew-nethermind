@@ -1,7 +1,7 @@
 class Nethermind < Formula
-  app_version = '1.14.7'
-  commit = '4fe81c6'
-  date = '20221130'
+  app_version = '1.15.0'
+  commit = '2b70876'
+  date = '20221228'
   desc "Our flagship .NET Core Ethereum client for Linux, Windows, MacOs - full and actively developed"
   homepage "http://downloads.nethermind.io"
   license "GNU LESSER GENERAL PUBLIC LICENSE"
@@ -10,13 +10,18 @@ class Nethermind < Formula
   case
   when OS.mac? && Hardware::CPU.intel?
     url "https://github.com/NethermindEth/nethermind/releases/download/#{app_version}/nethermind-darwin-amd64-#{app_version}-#{commit}-#{date}.zip"
-    sha256 "34b30e1e001be08a65f727876ee3980fce5a5bfa53819a288019bc516150684a"
+    sha256 "3e4eb7f817ab10e0c174a5e8be7c888b706b4ce81020cb14cc793872634cb153"
   when OS.mac? && Hardware::CPU.arm?
     url "https://github.com/NethermindEth/nethermind/releases/download/#{app_version}/nethermind-darwin-arm64-#{app_version}-#{commit}-#{date}.zip"
-    sha256 "61f9f190a9914d8e39e06aa72b7acc877034ab691a9ae45ea45fba19f78dca86"
+    sha256 "1e8ce2b834cd3d3f9fcfe2b94433cfd415fb52ea1bbea9bac9d3f6607bb4b6e2"
   else
     odie "Unexpected platform!"
   end
+  
+  depends_on "gmp"
+  depends_on "snappy"
+  depends_on "lz4"
+  depends_on "zstd"
 
   def install
     File.rename("./Nethermind.Runner","./nethermind")
