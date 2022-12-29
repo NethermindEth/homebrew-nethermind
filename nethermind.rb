@@ -17,6 +17,11 @@ class Nethermind < Formula
   else
     odie "Unexpected platform!"
   end
+  
+  depends_on "gmp"
+  depends_on "snappy"
+  depends_on "lz4"
+  depends_on "zstd"
 
   def install
     File.rename("./Nethermind.Runner","./nethermind")
