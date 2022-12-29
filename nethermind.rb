@@ -1,5 +1,5 @@
 class Nethermind < Formula
-  app_version = '1.14.5'
+  app_version = '1.15.0'
   package_prefix = ''
   desc "Our flagship Ethereum client for Linux, Windows, and macOS—full and actively developed."
   homepage "https://downloads.nethermind.io"
@@ -9,13 +9,18 @@ class Nethermind < Formula
   case
   when OS.mac? && Hardware::CPU.intel?
     url "https://github.com/NethermindEth/nethermind/releases/download/#{app_version}/#{package_prefix}-macos-x64.zip"
-    sha256 "6b272bf076007e5ce351329bd052589b05f1cf7a0a5f763f0e9fd8b28b365eb7"
+    sha256 "3e4eb7f817ab10e0c174a5e8be7c888b706b4ce81020cb14cc793872634cb153"
   when OS.mac? && Hardware::CPU.arm?
     url "https://github.com/NethermindEth/nethermind/releases/download/#{app_version}/#{package_prefix}-macos-arm64.zip"
-    sha256 "d38a9eb41b7c65dda59a8a64ef418610821e4f137ddfeca2557fefc74440464f"
+    sha256 "1e8ce2b834cd3d3f9fcfe2b94433cfd415fb52ea1bbea9bac9d3f6607bb4b6e2"
   else
     odie "Unexpected platform!"
   end
+  
+  depends_on "gmp"
+  depends_on "snappy"
+  depends_on "lz4"
+  depends_on "zstd"
 
   def install
     File.rename("./Nethermind.Runner","./nethermind")
