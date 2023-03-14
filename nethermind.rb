@@ -1,6 +1,6 @@
 class Nethermind < Formula
-  app_version = '1.17.1'
-  package_prefix = 'nethermind-1.17.1-120f4c8d'
+  app_version = '1.17.2'
+  package_prefix = 'nethermind-1.17.2-4faa7314'
   desc "Our flagship Ethereum client for Linux, Windows, and macOS—full and actively developed."
   homepage "https://downloads.nethermind.io"
   license "LGPL-3.0-only"
@@ -9,10 +9,10 @@ class Nethermind < Formula
   case
   when OS.mac? && Hardware::CPU.intel?
     url "https://github.com/NethermindEth/nethermind/releases/download/#{app_version}/#{package_prefix}-macos-x64.zip"
-    sha256 "afb0caa6728153aae6f459280da8e3d461e9adf847352f96cc0c9333b5dbbfbc"
+    sha256 "ad6dc093be4a85975c659326c0ad23a0f9212b94d5daab383ba9d513a9934488"
   when OS.mac? && Hardware::CPU.arm?
     url "https://github.com/NethermindEth/nethermind/releases/download/#{app_version}/#{package_prefix}-macos-arm64.zip"
-    sha256 "d21f4160ab0578f394725e1674e85eac4bc1ad821135d170b6f2b149ee985402"
+    sha256 "f813d3bd99ed8b4c709a8bd8221ed9df9d8ad2c72fd779d1a4afa135b392917c"
   else
     odie "Unexpected platform!"
   end
