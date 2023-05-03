@@ -2,15 +2,15 @@ class Nethermind < Formula
   desc "Our flagship Ethereum client for Linux, Windows, and macOS — full and actively developed."
   homepage "https://nethermind.io/nethermind-client"
   license "LGPL-3.0-only"
-  version "1.17.4"
+  version "1.18.0"
   
   case
   when OS.mac? && Hardware::CPU.intel?
-    url "https://github.com/NethermindEth/nethermind/releases/download/1.17.4/nethermind-1.17.4-a576133b-macos-x64.zip"
-    sha256 "1f792ab56d718627ac9cb03db180ab35a07f3292a152b2338cbd87470504d98c"
+    url "https://github.com/NethermindEth/nethermind/releases/download/1.18.0/nethermind-1.18.0-97e80dda-macos-x64.zip"
+    sha256 "a8e9160405c73e793ba2595c2e7b0c479214a08f1d2d2c50ac5e3292a50d5f09"
   when OS.mac? && Hardware::CPU.arm?
-    url "https://github.com/NethermindEth/nethermind/releases/download/1.17.4/nethermind-1.17.4-a576133b-macos-arm64.zip"
-    sha256 "b78384ab37c1dd5a48e52a7829827a5424c9b174c287c6185d7d53a6c49455e6"
+    url "https://github.com/NethermindEth/nethermind/releases/download/1.18.0/nethermind-1.18.0-97e80dda-macos-arm64.zip"
+    sha256 "9d1de605fc1faadda74160b7559871bb9573378df909065016b9b65b6cf04857"
   else
     odie "Unexpected platform!"
   end
