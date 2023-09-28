@@ -1,5 +1,5 @@
 class Nethermind < Formula
-  desc "Our flagship Ethereum client for Linux, Windows, and macOS — full and actively developed."
+  desc "A robust execution client for Ethereum node operators."
   homepage "https://nethermind.io/nethermind-client"
   license "LGPL-3.0-only"
   version "1.21.0"
@@ -12,18 +12,10 @@ class Nethermind < Formula
     url "https://github.com/NethermindEth/nethermind/releases/download/1.21.0/nethermind-1.21.0-bb9b72c0-macos-arm64.zip"
     sha256 "fc255100efa62d2b1b0e9aefe857aca42fe738a4570aa594866496f6e44d5646"
   else
-    odie "Unexpected platform!"
+    odie "Platform not supported"
   end
-  
-  depends_on "gmp"
-  depends_on "snappy"
-  depends_on "lz4"
-  depends_on "zstd"
 
   def install
-    File.rename("./Nethermind.Runner","./nethermind")
-    File.rename("./Nethermind.Cli","./nethermind-cli")
-    File.rename("./Nethermind.Launcher","./nethermind-launcher")
     system "codesign -s - ./nethermind"
     system "codesign -s - ./nethermind-cli"
     system "codesign -s - ./nethermind-launcher"
