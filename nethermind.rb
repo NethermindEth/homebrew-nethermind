@@ -7,10 +7,10 @@ class Nethermind < Formula
   case
   when OS.mac? && Hardware::CPU.intel?
     url "https://github.com/NethermindEth/nethermind/releases/download/1.21.0/nethermind-1.21.0-bb9b72c0-macos-x64.zip"
-    sha256 "32e451ce1868ba87a41c5c58ed8a6ef92d7543711d3fa8519ae590dff23e8fd9"
+    sha256 "3525c61742751b648157276d4a661f0a3c219008852cc9e8728354c13aed38d5"
   when OS.mac? && Hardware::CPU.arm?
     url "https://github.com/NethermindEth/nethermind/releases/download/1.21.0/nethermind-1.21.0-bb9b72c0-macos-arm64.zip"
-    sha256 "fc255100efa62d2b1b0e9aefe857aca42fe738a4570aa594866496f6e44d5646"
+    sha256 "1be90ec97d12073f2f930c6a2ea94dcbd966f984557be6d1b97c85f98fcba846"
   else
     odie "Platform not supported"
   end
