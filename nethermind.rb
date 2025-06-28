@@ -17,14 +17,12 @@ class Nethermind < Formula
 
   def install
     system "codesign -s - ./nethermind"
-    system "codesign -s - ./nethermind-cli"
     bin.install Dir['./chainspec']
     bin.install Dir['./configs']
     bin.install Dir['./Data']
     bin.install Dir['./keystore']
     bin.install Dir['./plugins']
     bin.install Dir['./nethermind']
-    bin.install Dir['./nethermind-cli']
     bin.install Dir['./NLog.config']
   end
 
