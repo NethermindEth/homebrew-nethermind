@@ -16,7 +16,6 @@ class Nethermind < Formula
   end
 
   def install
-    system "codesign -s - ./nethermind"
     bin.install Dir['./chainspec']
     bin.install Dir['./configs']
     bin.install Dir['./Data']
