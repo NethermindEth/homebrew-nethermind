@@ -2,15 +2,15 @@ class Nethermind < Formula
   desc "A robust execution client for Ethereum node operators."
   homepage "https://nethermind.io/nethermind-client"
   license "LGPL-3.0-only"
-  version "2.1.0"
+  version "2.2.0"
   
   case
   when OS.mac? && Hardware::CPU.intel?
-    url "https://github.com/NethermindEth/nethermind/releases/download/2.1.0/nethermind-2.1.0-b3e7e84c-macos-x64.zip"
-    sha256 "7e8beecfd46eb080173f12e9e2c6fa144235b0d7238137c2a14cd35b4792ebfe"
+    url "https://github.com/NethermindEth/nethermind/releases/download/2.2.0/nethermind-2.2.0-1d2aff00-macos-x64.zip"
+    sha256 "4c66c8833add8b803e0d506e996850a54887674a37fea8b21f070e8c940e8b94"
   when OS.mac? && Hardware::CPU.arm?
-    url "https://github.com/NethermindEth/nethermind/releases/download/2.1.0/nethermind-2.1.0-b3e7e84c-macos-arm64.zip"
-    sha256 "e21be972be3fc077fad03233764aa40fdbb2fe2272af0d6ed90131f70b931996"
+    url "https://github.com/NethermindEth/nethermind/releases/download/2.2.0/nethermind-2.2.0-1d2aff00-macos-arm64.zip"
+    sha256 "8249f04ee942758839718d6aaf6aa577e1bb9fddde14ddf415626286e3662f6f"
   else
     odie "Platform not supported"
   end
